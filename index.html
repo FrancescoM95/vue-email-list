@@ -37,12 +37,13 @@
 </head>
 
 <body>
-    <div id="root">
-        <ol>
+    <div id="root" class="m-4 d-flex justify-content-center fs-1">
+        <ol v-if="allEmailsReceived">
             <li v-for="(email, i) in emails" :key="i">
                 {{ email }}
             </li>
         </ol>
+        <p v-else>Loading... <i class=" fa-solid fa-spinner fa-spin"></i></p>
     </div>
 </body>
 
