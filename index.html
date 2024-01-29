@@ -38,6 +38,11 @@
 
 <body>
     <div id="root">
+        <ol>
+            <li v-for="(email, i) in emails" :key="i">
+                {{ email }}
+            </li>
+        </ol>
     </div>
 </body>
 
