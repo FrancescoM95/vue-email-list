@@ -10,9 +10,9 @@ const app = createApp({
     created() {
         for (let i = 0; i < 10; i++) {
             axios.get(endpoint).then(res => {
-                console.log(res.data.response)
+                const email = res.data.response
 
-                this.emails.push(res.data.response);
+                this.emails.push(email);
 
                 if (this.emails.length === 10) {
                     this.allEmailsReceived = true;
